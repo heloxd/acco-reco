@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ilocos Norte Accommodation Recommender</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Accommodation Recommender – Ilocos Norte</h1>
+
+    <form id="prefForm">
+        <label>Budget</label>
+        <select id="budget">
+            <option value="">Select</option>
+            <option value="low">Low</option>
+            <option value="mid">Mid</option>
+            <option value="high">High</option>
+        </select>
+
+        <label>Municipality</label>
+        <select id="location"></select>
+
+        <label>Amenities</label>
+        <div class="amenities">
+            <label><input type="checkbox" value="wifi"> WiFi</label>
+            <label><input type="checkbox" value="beachfront"> Beachfront</label>
+            <label><input type="checkbox" value="parking"> Parking</label>
+            <label><input type="checkbox" value="pool"> Pool</label>
+        </div>
+
+        <label>Travel Type</label>
+        <select id="tripType">
+            <option value="">Select</option>
+            <option value="leisure">Leisure</option>
+            <option value="adventure">Adventure</option>
+            <option value="culture">Culture</option>
+        </select>
+
+        <button type="submit">Recommend</button>
+    </form>
+
+    <h2>Results</h2>
+    <div id="results"></div>
+
+    <h2>Map</h2>
+    <div id="map"></div>
+</div>
+
+<script src="app.js"></script>
+
+<!-- GOOGLE MAPS API KEY REQUIRED -->
+<script async 
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+</script>
+
+</body>
+</html>
